@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow | Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="weather-app">
+        <header class="header">
+            <a href="#" class="logo">☀ WeatherNow</a>
+            <span class="live-badge">
+                <span class="live-dot"></span> LIVE WEATHER
+            </span>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">WEATHER AT A GLANCE</p>
+            <h1>Discover the weather<br>wherever you are.</h1>
+            <p class="subtitle">
+                Get real-time weather information for any city.
+            </p>
+
+            <form class="search-box" id="searchForm">
+                <span class="search-icon">⌕</span>
+                <input type="text" id="cityInput" placeholder="Search city, e.g. Lahore" aria-label="Enter city name"
+                    required>
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+
+            <p class="message" id="message" role="status">
+                Search for a city to see its weather.
+            </p>
+        </section>
+
+        <section class="weather-card" id="weatherCard" hidden>
+            <div class="weather-top">
+                <div>
+                    <p class="card-label">CURRENT WEATHER</p>
+                    <h2 id="cityName">Lahore, Pakistan</h2>
+                    <p class="date" id="localTime">Local time</p>
+                </div>
+
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+            </div>
+
+            <div class="temperature-row">
+                <h3 id="temperature">--°</h3>
+                <div class="condition-info">
+                    <p id="condition">Clear sky</p>
+                    <span id="feelsLike">Feels like --°C</span>
+                </div>
+            </div>
+
+            <div class="weather-divider"></div>
+
+            <div class="details-grid">
+                <div class="detail-box">
+                    <span class="detail-icon">💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <h4 id="humidity">--%</h4>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">💨</span>
+                    <div>
+                        <p>Wind Speed</p>
+                        <h4 id="windSpeed">-- km/h</h4>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">🌧️</span>
+                    <div>
+                        <p>Precipitation</p>
+                        <h4 id="precipitation">-- mm</h4>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">🌡️</span>
+                    <div>
+                        <p>Feels Like</p>
+                        <h4 id="feelsLikeDetail">--°C</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with <span>♥</span> using HTML, CSS & JavaScript</p>
+            <p>Weather data Created By Zohaib Salman</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
